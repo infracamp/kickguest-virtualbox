@@ -4,14 +4,14 @@
 rm -R /home/user/.ssh
 rm -R /mnt/*
 
-
+sleep 1
 echo "Mounting kick_share to /mnt"
 mount -t vboxsf kick_share /mnt -o uid=1000 -o gid=1000
 
 if [ ! -e /mnt/.ssh ]
 then
     echo "Creating new ssh key-pair in /mnt/.ssh..."
-    mkdir -f /mnt/.ssh
+    mkdir -p /mnt/.ssh
     ssh-keygen -t ed25519 -N "" -f /mnt/.ssh/id_ed25519
 fi;
 
@@ -22,5 +22,4 @@ chown -R user /home/user/.ssh
 chmod -R 700 /home/user/.ssh
 
 echo "KickGuest VMware :: happy container"
-sleep 1
 
