@@ -6,7 +6,7 @@ rm -R /mnt/*
 
 
 echo "Mounting kick_share to /mnt"
-mount -t vboxsf kick_share /mnt -o allow_other -o nonempty
+mount -t vboxsf kick_share /mnt -o uid=1000 -o gid=1000
 
 if [ ! -e /mnt/.ssh ]
 then
