@@ -1,0 +1,3 @@
+
+/provision/* text eol=lf
+*.md test eol=lf

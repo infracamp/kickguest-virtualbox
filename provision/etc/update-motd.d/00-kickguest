@@ -1,0 +1,35 @@
+#!/bin/bash
+
+#
+# This message is shown on login
+#
+
+
+
+IPADDR=$(ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/')
+
+echo ""
+echo ""
+echo -e '\e[0;34m'"infracamp's KickGuest VMware :: happy containers"
+echo -e '\e[0m'"------------------------------------------------"
+echo -e '\e[1;37m'
+echo "SSH login.........: ssh user@$IPADDR (No password)"
+echo "Browser...........: http://$IPADDR or http://kickhost (see below)"
+echo "Mounted folders.........: /mnt"
+echo -e "\e[0m"
+echo "Change keyboard layout..: sudo dpkg-reconfigure keyboard-configuration"
+echo "Windows - add host entry: echo $IPADDR kickhost >> %windir%\System32\drivers\etc\hosts "
+echo ""
+
+
+if [ -e /home/user/.ssh/id_*.pub ]
+then
+    echo "------ Your SSH Public Key: ----------";
+    echo $(cat  /home/user/.ssh/id_*.pub);
+    echo "--- Copy this key to github/gitlab ---";
+fi;
+
+echo ""
+echo "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+echo "Questions? visit http://infracamp.org"
+echo ""

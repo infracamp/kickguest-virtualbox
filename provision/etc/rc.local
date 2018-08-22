@@ -1,0 +1,26 @@
+#!/bin/bash
+
+
+rm -R /home/user/.ssh
+rm -R /mnt/*
+
+
+echo "Mounting kick_share to /mnt"
+mount -t vboxsf kick_share /mnt -o allow_other -o nonempty
+
+if [ ! -e /mnt/.ssh ]
+then
+    echo "Creating new ssh key-pair in /mnt/.ssh..."
+    mkdir -f /mnt/.ssh
+    ssh-keygen -t ed25519 -N "" -f /mnt/.ssh/id_ed25519
+fi;
+
+echo "Copying ssh files from /mnt/.ssh to /home/user/.ssh..."
+mkdir -p /home/user/.ssh
+cp /mnt/.ssh/* /home/user/.ssh/
+chown -R user /home/user/.ssh
+chmod -R 700 /home/user/.ssh
+
+echo "KickGuest VMware :: happy container"
+sleep 1
+
