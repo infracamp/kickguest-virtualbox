@@ -17,6 +17,8 @@ is associated with `local.infracamp.org` and `*.local.infracamp.org`)*:
 ![settings1](doc/glob-settings-network1.png)
 ![settings2](doc/glob-settings-network2.png)
 
+> Please make sure to remove and create a new host-adapter when upgrading kickguest (dhcp issue in virtualbox)
+
 Then connect the virtual maschine both with the host **and** the NAT bridge. 
 
 ![setting1](doc/settings-network1.png)
@@ -26,6 +28,7 @@ Finally map you *Projects* Path to the shared folder name `kick_share`.
 
 ![setting3](doc/settings-shared1.png)
 
+***Restart virtualbox before you start your first virtual maschine!***
 
 ## Log into to the system
 

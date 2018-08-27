@@ -3,13 +3,21 @@
 Download the free virtualbox runner and install
 ubuntu server using the default image. Select `minimal virtual maschine`,
 select `install ssh server`
-(don't use vmware user / host setup)
 
 - Create a user `user` with password `pass` (the password will be removed later)
 
+- Hostname: `kickguest`
+
+After installation login to the system.
+
+- Edit `/etc/netplan/00-netplan.yml` and add `enp0s8` to `dhcp4: yes`. Safe - reboot.
+
+
 ## The provision script
 
-Then, login to the image using ssh as user and  run this script:
+Then, login to the image using ssh as user `ssh user@local.infracamp.org` and  run this script:
+
+
 
 ````
 sudo apt-get update && sudo apt-get install -y git && cd /tmp/ && sudo git clone https://github.com/infracamp/kickguest-win10-vmware.git && sudo bash /tmp/kickguest-win10-vmware/provision/install.sh
