@@ -14,11 +14,24 @@ echo -e '\e[0;34m'"infracamp's KickGuest VMware :: happy containers"
 echo -e '\e[0m'"------------------------------------------------"
 echo -e '\e[1;37m'
 echo "SSH login.........: ssh user@$IPADDR (No password)"
-echo "Browser...........: http://$IPADDR or http://kickhost (see below)"
+if [ $IPADDR = "10.127.127.127" ]
+then
+echo "........or........: ssh user@local.infracamp.org"
+fi;
+
+echo ""
+
+echo "Browser...........: http://$IPADDR"
+if [ $IPADDR = "10.127.127.127" ]
+then
+echo "........or........: http://local.infracamp.org"
+fi;
+
+echo ""
+
 echo "Mounted folders.........: /mnt"
 echo -e "\e[0m"
 echo "Change keyboard layout..: sudo dpkg-reconfigure keyboard-configuration"
-echo "Windows - add host entry: echo $IPADDR kickhost >> %windir%\System32\drivers\etc\hosts "
 echo ""
 
 
