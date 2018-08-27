@@ -7,9 +7,11 @@ The simplest way to run docker and kickstart on windows 8/10 and macOS.
 
 ## Configuration
 
-> You have to do these setup-steps only once! You will be able to start as many containers / projects as you want to
+After downloading the `.ova`-image, import the virtual machine to your VirtualBox
 
-First: Create a host-only virtual network adaptor to run with the IP Address `10.127.127.127` *(this private ip
+![Import](doc/import-appliance1.png)
+
+Second: Create a host-only virtual network adaptor to run with the IP Address `10.127.127.127` *(this private ip
 is associated with `local.infracamp.org` and `*.local.infracamp.org`)*:
 
 *Hint: Of course, you can associate any other ip - but you than have to associate a hostname by yourself*
@@ -28,7 +30,7 @@ Finally map you *Projects* Path to the shared folder name `kick_share`.
 
 ![setting3](doc/settings-shared1.png)
 
-***Restart virtualbox before you start your first virtual maschine!***
+***Restart virtualbox before you start your first virtual machine!***
 
 ## Log into to the system
 

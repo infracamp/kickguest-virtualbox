@@ -32,6 +32,10 @@ rm /home/user/.bash_history
 sudo rm /root/.bash_history
 ``
 
+## Create Release
+
+Select ``export appliance``
+
 ## Descision about preinstalled packages
 
 - Why do we need `whois`-Package?
