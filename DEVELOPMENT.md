@@ -20,7 +20,7 @@ Then, login to the image using ssh as user `ssh user@local.infracamp.org` and  r
 
 
 ````
-sudo apt-get update && sudo apt-get install -y git && cd /tmp/ && sudo git clone https://github.com/infracamp/kickguest-win10-vmware.git && sudo bash /tmp/kickguest-win10-vmware/provision/install.sh
+sudo apt-get update && sudo apt-get install -y git && cd /tmp/ && sudo git clone https://github.com/infracamp/kickguest-virtualbox.git && sudo bash /tmp/kickguest-virtualbox/provision/install.sh
 ````
 
 (The Guste-Filesystem utils are hiddin in virtualbox-guest-utils )

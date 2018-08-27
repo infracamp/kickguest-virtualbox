@@ -3,7 +3,7 @@
 ## Error if something goes wrong
 set -e
 
-INSTALL_DIR=/tmp/kickguest-win10-vmware/provision
+INSTALL_DIR=/tmp/kickguest-virtualbox/provision
 
 apt-get update
 
