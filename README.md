@@ -7,33 +7,33 @@ The simplest way to run docker and kickstart on windows 8/10 and macOS.
 
 ## Configuration
 
-First: Create a host-only virtual network adaptor to run with the IP Address `10.127.127.127` (this ip
-is associated with `local.infracamp.org` and `*.local.infracamp.org`):
+> You have to do these setup-steps only once! You will be able to start as many containers / projects as you want to
+
+First: Create a host-only virtual network adaptor to run with the IP Address `10.127.127.127` *(this private ip
+is associated with `local.infracamp.org` and `*.local.infracamp.org`)*:
 
 *Hint: Of course, you can associate any other ip - but you than have to associate a hostname by yourself*
 
 ![settings1](doc/glob-settings-network1.png)
 ![settings2](doc/glob-settings-network2.png)
 
-Then, connect the virtual maschine with this and the NAT bridge. 
+Then connect the virtual maschine both with the host **and** the NAT bridge. 
 
 ![setting1](doc/settings-network1.png)
 ![setting2](doc/settings-network2.png)
 
-Map you *Projects* Path to a shared folder with name `kick_share`.
+Finally map you *Projects* Path to the shared folder name `kick_share`.
 
 ![setting3](doc/settings-shared1.png)
 
 
 ## Log into to the system
 
-Infracamp offers a public dns-record `local.infracamp.org` to point to `10.127.127.127`:
+```ssh user@local.infracamp.org``` or `ssh user@10.127.127.127`
 
-```ssh user@local.infracamp.org```
+Or in your browser (only from your local computer)
 
-Or, by browser
-
-```local.infracamp.org```
+```http://local.infracamp.org``` (only when you run a http-based container)
 
 ## Run the image
 

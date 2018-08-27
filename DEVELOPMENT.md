@@ -16,6 +16,14 @@ sudo apt-get update && sudo apt-get install -y git && cd /tmp/ && sudo git clone
 ````
 
 (The Guste-Filesystem utils are hiddin in virtualbox-guest-utils )
+
+Test the system - then
+
+``
+rm /home/user/.bash_history
+sudo rm /root/.bash_history
+``
+
 ## Descision about preinstalled packages
 
 - Why do we need `whois`-Package?
