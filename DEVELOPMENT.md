@@ -1,5 +1,12 @@
 # How to develop this piece of software.
 
+## Virtualbox settings
+
+Set `Documents/Projects` as shared folder `kick_share`
+
+
+## 
+
 Download the free virtualbox runner and install
 ubuntu server using the default image. Select `minimal virtual maschine`,
 select `install ssh server`
@@ -32,9 +39,13 @@ rm /home/user/.bash_history
 sudo rm /root/.bash_history
 ``
 
+Wait until `docker ps` is executing correclty (first startup will take some minutes)
+
 ## Create Release
 
-Select ``export appliance``
+![development](doc/development1.png)
+
+Select ``export appliance`` (in 2.0 open virtual maschine format - including manifest.)
 
 ## Descision about preinstalled packages
 
