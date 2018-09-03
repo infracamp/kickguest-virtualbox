@@ -35,6 +35,9 @@ chmod +x /etc/update-motd.d/*
 
 cp $INSTALL_DIR/etc/issue /etc/
 
+## Remove /opt so people don't get confused with kickstart containers
+rm -R /opt
+
 echo "DONE!"
 
 

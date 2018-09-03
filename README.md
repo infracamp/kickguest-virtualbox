@@ -30,7 +30,7 @@ Finally map you *Projects* Path to the shared folder name `kick_share`.
 
 ![setting3](doc/settings-shared1.png)
 
-***Restart virtualbox before you start your first virtual machine!***
+***Restart Windows before you start your first virtual machine!***
 
 ## Log into to the system
 
@@ -46,3 +46,16 @@ The image will start and:
 
 - Create a ssh private/public key pair in `sharedFolder/.ssh/` (if not already existing)
 
+
+## FAQ / Debugging
+
+- Try to ping 10.127.127.1 from inside container. If it fails, maybe you'll have to
+  restart your computer. (Windows need restart for adapter-canges to take effect)
+  
+- Nothing is is `/mnt`: Is your shared-folder named `kick_share` and active?
+
+- The machine won't boot:
+    - Are virtualisation CPU features turned on in your bios?
+      (VirtualBox will throw an exception)
+    - Is machine vm-type set "Ubuntu" and version to "Ubuntu (64-bit)"?
+      (Otherwise system will hang after grub bootloader)
