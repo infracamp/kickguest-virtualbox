@@ -12,7 +12,7 @@ echo "PermitEmptyPasswords yes" >> /etc/ssh/sshd_config
 echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 
 ## Install the packages
-apt-get install -y docker.io curl git pwgen whois virtualbox-guest-additions-iso virtualbox-guest-utils  vim
+apt-get install -y docker.io curl git pwgen whois virtualbox-guest-additions-iso virtualbox-guest-utils  vim bash-completion
 
 ## Allow normal user to access docker command
 gpasswd -a user docker
@@ -37,6 +37,8 @@ cp $INSTALL_DIR/etc/issue /etc/
 
 ## Remove /opt so people don't get confused with kickstart containers
 rm -R /opt
+
+echo "cd /mnt" >> /home/user/.bashrc
 
 echo "DONE!"
 
