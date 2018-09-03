@@ -7,9 +7,14 @@ The simplest way to run docker and kickstart on windows 8/10 and macOS.
 
 ## Configuration
 
+### Importing the virtual appliance
+
 After downloading the `.ova`-image, import the virtual machine to your VirtualBox
 
 ![Import](doc/import-appliance1.png)
+
+
+
 
 Second: Create a host-only virtual network adaptor to run with the IP Address `10.127.127.127` *(this private ip
 is associated with `local.infracamp.org` and `*.local.infracamp.org`)*:
@@ -20,6 +25,14 @@ is associated with `local.infracamp.org` and `*.local.infracamp.org`)*:
 ![settings2](doc/glob-settings-network2.png)
 
 > Please make sure to remove and create a new host-adapter when upgrading kickguest (dhcp issue in virtualbox)
+
+### Configuring the virtual appliance
+
+Open the `settings`-dialog of the newly created machine.
+
+Ensure the machine is configured to `Ubuntu (64-bit)`
+
+![General Settings](doc/settings-general1.png)
 
 Then connect the virtual maschine both with the host **and** the NAT bridge. 
 
