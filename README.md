@@ -1,15 +1,32 @@
 # Kickstart VirtualBox Image
 
-The simplest way to run docker and kickstart on windows 8/10 and macOS.
+The simplest way to run docker and kickstart on windows 8/10. The average Setup-Time is 10 Minutes. 
+
+The Image offers:
+
+- Mounting a shared folder on the host machine
+- Auto-Generating ssh key pair for git
+- git
+- docker setup
+
 
 - [Install VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-- [Download latest release](https://github.com/infracamp/kickguest-virtualbox/releases)
+- **[Download latest kickguest-virtualbox-0.x.ova -image release](https://github.com/infracamp/kickguest-virtualbox/releases)**
 
 ## Configuration
 
+### Install VirtualBox
+
+[Download VirtualBox](https://www.virtualbox.org/wiki/Downloads) and install it. You'll have to enable
+`Virtualisation Support` in your BIOS setting for VirtualBox to work.
+
+**VirtualBox will conflict with HyperV!** Make sure neither *HyperV* nor *Docker for Windows* is/was installed on your computer.
+
+In case on error: Google the VirtualBox Error code and you'll find help.
+
 ### Importing the virtual appliance
 
-After downloading the `.ova`-image, import the virtual machine to your VirtualBox
+After downloading the [kickguest-virtualbox-0.x.ova](https://github.com/infracamp/kickguest-virtualbox/releases)-image, import the virtual machine to your VirtualBox
 
 ![Import](doc/import-appliance1.png)
 
