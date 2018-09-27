@@ -62,6 +62,12 @@ The image will start and:
 
 - Create a ssh private/public key pair in `sharedFolder/.ssh/` (if not already existing)
 
+## IDE Settings
+
+**Extremly useful Setting:**
+To login directly to your VM:
+
+![setting3](doc/intelliJ-settings.png)
 
 ## FAQ / Debugging
 
