@@ -39,11 +39,14 @@ Then connect the virtual maschine both with the host **and** the NAT bridge.
 ![setting1](doc/settings-network1.png)
 ![setting2](doc/settings-network2.png)
 
-Finally map you *Projects* Path to the shared folder name `kick_share`.
+Finally map **YOUR** *Projects* Path to the shared folder name `kick_share`.
 
 ![setting3](doc/settings-shared1.png)
 
-***Restart Windows before you start your first virtual machine!***
+***Restart Windows!***
+
+Start the virtual machine: 
+![setting3](doc/settings-shared2-startvm.png)
 
 ## Log into to the system
 
