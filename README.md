@@ -62,12 +62,23 @@ The image will start and:
 
 - Create a ssh private/public key pair in `sharedFolder/.ssh/` (if not already existing)
 
+
 ## IDE Settings
 
 **Extremly useful Setting:**
 To login directly to your VM:
 
 ![setting3](doc/intelliJ-settings.png)
+
+## Basic git settings
+
+To create your personal signature under your commit-message, 
+configure git by executing the following commands: (change "..." to your personal name/ e-mail)
+
+````
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+````
 
 ## FAQ / Debugging
 
