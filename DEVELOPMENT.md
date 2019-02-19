@@ -35,18 +35,32 @@ After installation login to the system (User: user Pass: pass).
 - Install vim `apt install vim`
 - Edit `/etc/netplan/01-netcfg.yaml` and add `enp0s8` to `dhcp4: yes`. Safe - reboot.
 
+```yaml
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp0s3:
+      dhcp4: yes
+      dhcp6: no
+      optional: yes
+    enp0s8:
+      dhcp4: yes
+      dhcp6: no
+      optional: yes
+```
+
+*`optional: yes` prevents systemd waiting for network operations*
 
 ## The provision script
 
 Then, login to the image using ssh as user `ssh user@local.infracamp.org` and  run this script:
 
-
-
 ````
 sudo apt-get update && sudo apt-get install -y git && cd /tmp/ && sudo git clone https://github.com/infracamp/kickguest-virtualbox.git && sudo bash /tmp/kickguest-virtualbox/provision/install.sh
 ````
 
-(The Guste-Filesystem utils are hiddin in virtualbox-guest-utils )
+(The Guste-Filesystem utils are hidden in virtualbox-guest-utils )
 
 Test the system - then
 
