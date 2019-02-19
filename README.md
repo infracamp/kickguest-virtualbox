@@ -15,7 +15,7 @@ The Image offers:
 
 ## Configuration
 
-### Install VirtualBox
+### Install VirtualBox (6.0+)
 
 [Download VirtualBox](https://www.virtualbox.org/wiki/Downloads) and install it. You'll have to enable
 `Virtualisation Support` in your BIOS setting for VirtualBox to work.

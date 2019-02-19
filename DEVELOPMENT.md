@@ -5,19 +5,35 @@
 Set `Documents/Projects` as shared folder `kick_share`
 
 
-## 
+## Manual preparation of creating a new image
+
+Create a new virtual machine using:
+
+- name: `kickguest-virtualbox-0.4`
+- Create harddisk: 20 GB Space
+- Image disk file type: `VDI` - Dynamically allocated
+- Size: 20 GB
+
+Edit Settings and choose ubuntu-18.04 iso as boot medium.
 
 Download the free virtualbox runner and install
 ubuntu server using the default image. Select `minimal virtual maschine`,
 select `install ssh server`
 
-- Create a user `user` with password `pass` (the password will be removed later)
-
+- Select enp0s3 as primary interface to be configured by dhcp
 - Hostname: `kickguest`
+- Create a user `user` with password `pass` (the password will be removed later)
+- Partition: Use entire disk
+- No automatic updates
+- Package selection: Install `OpenSSH server`
+- Install GRUB bootloader to master boot record: `YES`
+- Reboot the system
 
-After installation login to the system.
+After installation login to the system (User: user Pass: pass).
 
-- Edit `/etc/netplan/00-netplan.yml` and add `enp0s8` to `dhcp4: yes`. Safe - reboot.
+- Become root: `sudo bash`
+- Install vim `apt install vim`
+- Edit `/etc/netplan/01-netcfg.yaml` and add `enp0s8` to `dhcp4: yes`. Safe - reboot.
 
 
 ## The provision script

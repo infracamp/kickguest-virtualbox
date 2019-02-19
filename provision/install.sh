@@ -14,6 +14,9 @@ echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 ## Install the packages
 apt-get install -y docker.io curl git pwgen whois virtualbox-guest-additions-iso virtualbox-guest-utils  vim bash-completion
 
+apt-get clean
+rm -R /var/lib/apt/lists/*
+
 ## Allow normal user to access docker command
 gpasswd -a user docker
 
