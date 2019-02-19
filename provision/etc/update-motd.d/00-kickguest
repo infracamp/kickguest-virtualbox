@@ -50,4 +50,4 @@ echo "Type: 'll' to see all files and 'cd <dirname>' to move the directory"
 echo ""
 
 
-docker info &
+
