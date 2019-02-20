@@ -22,5 +22,5 @@ chown -R user /home/user/.ssh
 chmod -R 700 /home/user/.ssh
 
 echo "KickGuest VMware :: happy container"
-cd
+
 docker info &

@@ -71,7 +71,18 @@ sudo rm /root/.bash_history
 
 Wait until `docker ps` is executing correclty (first startup will take some minutes)
 
+```
+sudo shutdown -h now
+```
+
 ## Create Release
+
+**Make sure to `sudo rm /home/home/.ssh/*` to not ship your ssh keys!!!**
+
+```
+sudo rm /home/user/.ssh/*
+sudo rm /root/.ssh/*
+```
 
 ![development](doc/development1.png)
 
