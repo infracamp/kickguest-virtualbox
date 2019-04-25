@@ -2,7 +2,7 @@
 
 
 rm -R /home/user/.ssh
-rm -R /mnt/*
+#rm -R /mnt/*
 
 sleep 1
 echo "Mounting kick_share to /mnt"
@@ -12,7 +12,6 @@ if [ ! -e /mnt/.ssh ]
 then
     echo "Creating new ssh key-pair in /mnt/.ssh..."
     mkdir -p /mnt/.ssh
-    ssh-keygen -t ed25519 -N "" -f /mnt/.ssh/id_ed25519
 fi;
 
 echo "Copying ssh files from /mnt/.ssh to /home/user/.ssh..."
@@ -20,6 +19,8 @@ mkdir -p /home/user/.ssh
 cp /mnt/.ssh/* /home/user/.ssh/
 chown -R user /home/user/.ssh
 chmod -R 700 /home/user/.ssh
+
+chown -R user:user /mnt
 
 echo "KickGuest VMware :: happy container"
 

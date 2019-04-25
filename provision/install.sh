@@ -12,7 +12,7 @@ echo "PermitEmptyPasswords yes" >> /etc/ssh/sshd_config
 echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 
 ## Install the packages
-apt-get install -y docker.io curl git pwgen whois virtualbox-guest-additions-iso virtualbox-guest-utils  vim bash-completion
+apt-get install -y docker.io curl git pwgen whois virtualbox-guest-additions-iso virtualbox-guest-utils  vim bash-completion samba
 
 apt-get clean
 rm -R /var/lib/apt/lists/*
@@ -35,6 +35,9 @@ chmod +x /etc/rc.local
 
 cp -r $INSTALL_DIR/etc/update-motd.d/* /etc/update-motd.d/
 chmod +x /etc/update-motd.d/*
+
+cp -r $INSTALL_DIR/etc/samba/smb.conf /etc/samba
+chmod 755 /etc/samba/smb.conf
 
 cp $INSTALL_DIR/etc/issue /etc/
 

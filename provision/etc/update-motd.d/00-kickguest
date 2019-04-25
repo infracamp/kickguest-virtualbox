@@ -40,6 +40,9 @@ then
     echo "------ Your SSH Public Key: ----------";
     echo $(cat  /home/user/.ssh/id_*.pub);
     echo "--- Copy this key to github/gitlab ---";
+else
+    echo "No ssh-keys found in /mnt/.ssh: Create a key by calling: "
+    echo "ssh-keygen -t ed25519 -f /mnt/.ssh/id_ed25519"
 fi;
 
 echo ""

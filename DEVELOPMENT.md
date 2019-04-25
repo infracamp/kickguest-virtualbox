@@ -100,3 +100,14 @@ cloud infrastructure - so we'll make it easy to create hashes.
 
 This is used to mount the host filesystems into the container.
 (Open Source version of VMwares TOOLS)
+
+
+## Learnings Samba Share
+
+Windows will overwrite permissions on save by default. To prevent this, we 
+use this option in smb config.
+```
+map archive = no
+```
+
+(IntelliJ will overwrite permissions as long as "secure save" is activated).
