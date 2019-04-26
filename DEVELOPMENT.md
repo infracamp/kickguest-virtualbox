@@ -9,10 +9,10 @@ Set `Documents/Projects` as shared folder `kick_share`
 
 Create a new virtual machine using:
 
-- name: `kickguest-virtualbox-0.4`
-- Create harddisk: 20 GB Space
+- name: `kickguest-virtualbox`
+- Create harddisk: 30 GB Space
 - Image disk file type: `VDI` - Dynamically allocated
-- Size: 20 GB
+- Size: 30 GB
 
 Edit Settings and choose ubuntu-18.04 iso as boot medium.
 
